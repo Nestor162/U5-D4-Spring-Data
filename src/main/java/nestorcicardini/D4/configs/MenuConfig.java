@@ -9,16 +9,16 @@ import org.springframework.context.annotation.Scope;
 import nestorcicardini.D4.entities.Consummation;
 import nestorcicardini.D4.entities.Menu;
 import nestorcicardini.D4.entities.Order;
-import nestorcicardini.D4.entities.Product;
-import nestorcicardini.D4.entities.Table;
 import nestorcicardini.D4.entities.Order.OrderStatus;
+import nestorcicardini.D4.entities.Product;
+import nestorcicardini.D4.entities.TableInfo;
 import nestorcicardini.D4.entities.drinks.Drink;
 import nestorcicardini.D4.entities.drinks.Lemonade;
 import nestorcicardini.D4.entities.drinks.Water;
 import nestorcicardini.D4.entities.drinks.Wine;
 import nestorcicardini.D4.entities.merchandise.Gadget;
-import nestorcicardini.D4.entities.merchandise.Shirt;
 import nestorcicardini.D4.entities.merchandise.Gadget.gadgetType;
+import nestorcicardini.D4.entities.merchandise.Shirt;
 import nestorcicardini.D4.entities.pizzas.Pizza;
 import nestorcicardini.D4.toppings.HamTopping;
 import nestorcicardini.D4.toppings.OnionTopping;
@@ -134,22 +134,22 @@ public class MenuConfig {
 
 	@Scope("singleton")
 	@Bean
-	Table getTable1() {
-		Table table = new Table(1, 4, false);
+	TableInfo getTable1() {
+		TableInfo table = new TableInfo(1, 4, false);
 		return table;
 	}
 
 	@Scope("singleton")
 	@Bean
-	Table getTable2() {
-		Table table = new Table(2, 2, true);
+	TableInfo getTable2() {
+		TableInfo table = new TableInfo(2, 2, true);
 		return table;
 	}
 
 	@Scope("singleton")
 	@Bean
-	Table getTable3() {
-		Table table = new Table(3, 6, false);
+	TableInfo getTable3() {
+		TableInfo table = new TableInfo(3, 6, false);
 		return table;
 	}
 
