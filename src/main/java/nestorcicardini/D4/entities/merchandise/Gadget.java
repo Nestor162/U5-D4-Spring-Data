@@ -1,5 +1,7 @@
 package nestorcicardini.D4.entities.merchandise;
 
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,6 +12,8 @@ import nestorcicardini.D4.entities.Product;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@DiscriminatorValue("non_consumable")
 public class Gadget extends Product {
 	private gadgetType type;
 

@@ -1,5 +1,7 @@
 package nestorcicardini.D4.entities.drinks;
 
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,6 +12,8 @@ import nestorcicardini.D4.entities.Consummation;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@DiscriminatorValue("Drink")
 public abstract class Drink extends Consummation {
 	private double size;
 
